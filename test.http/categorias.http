@@ -3,12 +3,8 @@
 @baseURL   = http://localhost:3999
 
 
-###
+### clicar no 'send request'
 //Get - Lista categorias
 GET {{baseURL}}/categoria
 
 Content-Type: application/json
-
-
-
-
