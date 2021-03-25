@@ -1,0 +1,14 @@
+//Teste de requisições
+
+@baseURL   = http://localhost:3999
+
+
+###
+//Get - Lista categorias
+GET {{baseURL}}/categoria
+
+Content-Type: application/json
+
+
+
+
