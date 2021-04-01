@@ -4,6 +4,7 @@ const InicializaMongoServer = require('./config/bancoDeDados_Conexao');
 
 //Definindo as rotas da aplicação
 const rotasCategorias = require('./routes/Categoria');
+const rotasRestaurantes = require('./routes/Restaurante');
 
 InicializaMongoServer();
 
@@ -25,9 +26,10 @@ app.get('/', (req, res) => {
     });
 });
 
-//Rotas da categoria
-app.use('/categoria', rotasCategorias)
+//Rotas das categorias
+app.use('/categorias', rotasCategorias);
 
+app.use('/restaurantes', rotasRestaurantes );
 
 app.listen(PORT, (req, res) => {
     console.log(`🆙Servidor web iniciado na porta ${PORT}🆙`);

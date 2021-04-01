@@ -1,10 +1,63 @@
 //Teste de requisições
-
 @baseURL   = http://localhost:3999
+@idCategorias = 605bdf1baf0d1ba986a0c107
+@idRestaurnates = 
 
-
+//-------------------------------------------------
 ### clicar no 'send request'
 //Get - Lista categorias
-GET {{baseURL}}/categoria
+GET {{baseURL}}/categorias
+Content-Type: application/json
 
+
+//-------------------------------------------------
+### clicar no 'send request'
+//Get - Lista a categoria pelo id
+GET {{baseURL}}/categorias/{{idCategorias}}
+Content-Type: application/json
+
+
+//-------------------------------------------------
+###
+//POST - Inclui uma nova categoria
+POST {{baseURL}}/categorias
+Content-Type: application/json
+
+{"nome":"Maravilhas do Zé", "status":"ativo"}
+
+
+//-------------------------------------------------
+### 
+//DELETE - APAGA A CATEGORIA
+DELETE {{baseURL}}/categorias/{{idCategorias}}
+Content-Type: application/json
+
+
+//-------------------------------------------------
+###
+//Altera uma categoria
+//PUT
+PUT {{baseURL}}/categorias/{{idCategorias}}
+Content-Type: application/json
+
+{
+    "status": "ativo",
+    "_id": "605bdf1baf0d1ba986a0c107",
+    "nome": "Pratos Feitos"
+}
+
+
+//--------------------------------------------------
+###
+//Listar os restaurantes
+//GET
+GET {{baseURL}}/restaurantes
+Content-Type: application/json
+
+
+//--------------------------------------------------
+###
+//Listar restaurante por um determinado ID
+//GET/:id
+GET {{baseURL}}/restaurantes/{{idRestaurnates}}
 Content-Type: application/json

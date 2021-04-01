@@ -1,7 +1,7 @@
-const bancoMongo = require('mongoose');
+const mongoose = require('mongoose');
 
 //criando o schema categoria "uma tabela"
-const CategoriaSchema = bancoMongo.Schema({
+const CategoriaSchema = mongoose.Schema({
     nome: {
         type: String,
         unique: true,
@@ -14,4 +14,4 @@ const CategoriaSchema = bancoMongo.Schema({
 }, { timestamps: true });
 
 
-module.exports = bancoMongo.model('categoria', CategoriaSchema);
+module.exports = mongoose.model('categoria', CategoriaSchema);
