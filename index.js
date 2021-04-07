@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', '*')
     //medotodos que serao permitidos
     res.setHeader('Access-Controll-Allow-Methods', 'GET,POST,PUT,DELETE,OPTION,PATCH')
-    next()
+    next() //passando por todos esses middlewares este next permite que sejam executados os proximos app.uses
 })
 
 //parse conteudo json
