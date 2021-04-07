@@ -10,8 +10,14 @@ const CategoriaSchema = mongoose.Schema({
         type: String,
         enum: ['ativo', 'inativo'],
         default: 'ativo'
+    },
+    foto: {
+        originalName: { type: String },
+        path: { type: String },
+        size: { type: Number },
+        mimeType: { type: String }
     }
-}, { timestamps: true });
+}, { timestamps: true }); //registra a data e a hora do registro
 
 
 module.exports = mongoose.model('categoria', CategoriaSchema);
