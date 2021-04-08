@@ -1,7 +1,7 @@
-//Teste de requisições
-@baseURL   = http://localhost:3999
+//Teste de requisições para /categorias
+@baseURL   = http://localhost:4000
+
 @idCategorias = 605bdf1baf0d1ba986a0c107
-@idRestaurnates = 
 
 //-------------------------------------------------
 ### clicar no 'send request'
@@ -45,19 +45,3 @@ Content-Type: application/json
     "_id": "605bdf1baf0d1ba986a0c107",
     "nome": "Pratos Feitos"
 }
-
-
-////////////////////////////////////////////////////////////////
-###
-//Listar os restaurantes
-//GET
-GET {{baseURL}}/restaurantes
-Content-Type: application/json
-
-
-//--------------------------------------------------
-###
-//Listar restaurante por um determinado ID
-//GET/:id
-GET {{baseURL}}/restaurantes/{{idRestaurnates}}
-Content-Type: application/json

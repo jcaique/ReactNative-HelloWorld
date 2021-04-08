@@ -1,0 +1,79 @@
+//Teste de requisições para /restaurantes
+
+@baseURL   = http://localhost:4000
+@idRestaurnate = 
+
+
+###
+//Listar os restaurantes
+//  GET
+GET {{baseURL}}/restaurantes
+Content-Type: application/json
+
+
+###
+//Listar restaurante por um determinado ID
+//   GET/:id
+GET {{baseURL}}/restaurantes/{{idRestaurnate}}
+Content-Type: application/json
+
+
+###
+//Lista o restaurante pelo id da categoria
+//   GET/restaurantes
+GET {{baseURL}}/restaurantes/{{idRestaurnate}}
+Content-Type: application/json
+
+
+###
+//Inclui um novo restaurante
+//   POST/restaurantes
+POST {{baseURL}}/restaurantes
+Content-Type: application/json
+
+{
+    "nome": "Restaurante",
+    "status": "ativo",
+    "foto":{
+        "originalname": "batata.png",
+        "path": "publics/uploads/batata.png",
+        "size": 45318,
+        "mimetype": "image/png"
+    },
+    "notaMedia": 4.7,
+    "categoria": "6065192e669deb3110d3827d",
+    "faixaPreco": "barato",
+    "tempoEntrega":"45 a 60min",
+    "telefone":"(11)1234-3456",
+    "endereco":{
+        "logradouro":"Praça da Independencia, 224",
+        "bairro":"Centro",
+        "cep":"18540000",
+        "municipio":"Itu",
+        "estado":"sp",
+        "complemento":"perto do zl"
+    },
+    "geolocalizacao":{
+        "latitude": -23.345678,
+        "longitude": -54.453455
+    }
+}
+
+
+
+###
+//DELETE - Apaga um restaurante
+DELETE {{baseURL}}/resturantes/{{idRestaurnate}}
+Content-Type:application/json
+
+
+###
+//PUT - Altera o restaurante
+PUT {{baseURL}}/restaurantes/{{idRestaurnate}}
+Content-Type: application/json
+
+{
+    "_id": "",
+    "nome": "Churrascaria",
+    "status": "ativo"
+}
